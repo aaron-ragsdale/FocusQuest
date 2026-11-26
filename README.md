@@ -35,3 +35,11 @@ In repository Settings → Pages, select Deploy from a branch, main, / (root), a
 
 A website cannot prevent Escape, closing a tab, switching apps, or visiting other sites. Deep Focus measures browser presence, not actual attention. YouTube embeds may contain links or recommendations. The next phases are a Chrome extension for website blocking and a desktop app for stronger OS-permitted restrictions with an emergency exit.
 
+
+## Optional AI Focus (experimental)
+
+Choose Classic (no camera), Awareness (count suspected phone checks), or AI Focus (automatically pause and resume). These settings work alongside Casual or Deep Focus. Enable the camera before starting, look at your normal work location and capture calibration step 1, then look at your phone while it is visible to the camera and capture step 2. Test the status before starting a quest. The defaults are 1.5 seconds of suspected phone attention and 1 second before resuming. Adjust detection confidence, detection frequency, and optional tracking-loss behavior. Hand tracking adds a diagnostic signal; it is not required for a pause.
+
+Face Landmarker and EfficientDet-Lite0 run locally through MediaPipe Tasks Vision; the optional Hand Landmarker also runs locally. Model files and runtime download from Google/CDN hosts. No images are recorded or uploaded by FocusQuest. Session history and exports include estimated phone-check counts, duration, elapsed time and event timing. Stop camera at any time to continue without AI. Detection does not affect break timers. Camera may remain on between rounds until stopped or the cycle ends.
+
+The gaze estimator compares two calibrated face/iris feature patterns, not a physical gaze ray. It cannot reliably identify every phone interaction or distinguish every notebook glance; phone visibility, posture and lighting matter. Background browser throttling can interrupt tracking. Keep the page visible and use Awareness first to evaluate accuracy. Chrome/Edge and model loading require real-device validation.
